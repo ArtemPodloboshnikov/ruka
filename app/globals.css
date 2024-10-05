@@ -1,0 +1,35 @@
+:root {
+  --red: #DF2740;
+  --black: #191B21;
+  --white: white;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  color: var(--white);
+  background: var(--black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 107px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+}

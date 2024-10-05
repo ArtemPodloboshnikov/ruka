@@ -1,0 +1,49 @@
+.wrap, .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 21px black;
+    transition: all 0.3s ease;
+    grid-column: span 3;
+    height: 335px;
+    overflow: hidden;
+    border-radius: 40px;
+    position: relative;
+    top: 0;
+}
+
+.wrap * {
+    transition: all 0.3s ease;
+}
+
+.wrap:hover {
+    box-shadow: none;
+    top: 10px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 50%;
+    width: fit-content;
+    height: 41px;
+    color: var(--white);
+}
+
+.img {
+    object-fit: cover;
+}
+
+.wrap:hover .img {
+    transform: scale(1.1);
+}
