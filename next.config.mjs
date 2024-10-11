@@ -13,6 +13,11 @@ const nextConfig = {
         ]
     },
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+    output: "export",
+    basePath: "/ruaks",
+    images: {
+        unoptimized: true,
+    },
 };
 
 const withMDX = createMDX({

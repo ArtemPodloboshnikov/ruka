@@ -11,7 +11,7 @@ const PagesLinks = () => {
         {
             href: "/about",
             text: "О нас",
-            cover: "dojo.avif"
+            cover: "team.avif"
         },
         {
             href: "/dojo",
@@ -24,18 +24,13 @@ const PagesLinks = () => {
             cover: "news.avif"
         },
         {
-            href: "/store",
-            text: "Магазин",
-            cover: "dojo.avif"
-        },
-        {
             href: "/contacts",
             text: "Контакты",
             cover: "dojo.avif"
         },
     ]
     return (
-        <nav className={styles.links}>
+        <nav className={styles.links} onMouseLeave={()=>{setTimeout(()=>setCoverIndex(-1), 1500)}}>
             {links.map((link, idx)=>
             <Link
             key={idx}
@@ -43,12 +38,11 @@ const PagesLinks = () => {
             className={idx === current ? styles.active : "" }
             onClick={()=>setCurrent(idx)}
             onMouseOver={()=>{setCoverIndex(idx);}}
-            onMouseLeave={()=>{setTimeout(()=>setCoverIndex(-1), 2000)}}
             style={coverIndex !== -1 && current === idx ? { color: "var(--red)" } : { }}
             >
                 {link.text}
                 {coverIndex === idx &&  createPortal(
-                    <div className={styles.cover} style={{ backgroundImage: `url(/images/${links[idx].cover})` }} />,
+                    <div className={styles.cover} style={{ backgroundImage: `url(/ruaks/images/${links[idx].cover})` }} />,
                     document.getElementById("sidebar")!
                 )}
             </Link>)}

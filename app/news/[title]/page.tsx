@@ -9,7 +9,7 @@ export default function Article({ params }: { params: { title: string } }) {
     }
     )
     return (
-        <div style={{ gridColumn: "1 / 13", display: "flex", flexDirection: "column", gap: "10px" }}>
+        <div style={{ gridColumn: "1 / 13", display: "flex", flexDirection: "column", gap: "10px", paddingBottom: "60px", paddingRight: "30px" }}>
             <Content />
         </div>
     )
