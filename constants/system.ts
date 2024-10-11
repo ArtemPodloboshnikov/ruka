@@ -15,3 +15,5 @@ export const news = [
         cover: NewTechCover
     }
 ]
+
+export const staticTitles = news.map(n=>({ title: n.file }))
