@@ -42,7 +42,7 @@ const PagesLinks = () => {
             >
                 {link.text}
                 {coverIndex === idx &&  createPortal(
-                    <div className={styles.cover} style={{ backgroundImage: `url(/images/${links[idx].cover})` }} />,
+                    <div className={styles.cover} style={{ backgroundImage: `url(/ruaks/images/${links[idx].cover})` }} />,
                     document.getElementById("sidebar")!
                 )}
             </Link>)}
