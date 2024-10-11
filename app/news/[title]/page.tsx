@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic"
 import { staticTitles } from "@/constants/system";
+import { Suspense } from "react";
 
 type Params = {
     title: string;
@@ -18,7 +19,9 @@ export default function Article({ params }: { params: { title: string } }) {
     )
     return (
         <div style={{ gridColumn: "1 / 13", display: "flex", flexDirection: "column", gap: "10px", paddingBottom: "60px", paddingRight: "30px" }}>
-            <Content />
+            <Suspense fallback={<></>}>
+                <Content />
+            </Suspense>
         </div>
     )
 }
