@@ -23,8 +23,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           >
           <Image
           style={{ justifySelf: "center", objectFit: "cover" }}
-          src={`/${decodeURIComponent(props.src)}`}
-          alt={props.alt}
+          src={`/${decodeURIComponent(String(props.src))}`}
+          alt={String(props.alt)}
           title={props.alt}
           fill
           />
