@@ -14,7 +14,7 @@ const nextConfig = {
     },
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     output: "export",
-    basePath: "/ruaks",
+    basePath: "/",
     images: {
         unoptimized: true,
     },

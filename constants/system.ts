@@ -16,4 +16,4 @@ export const news = [
     }
 ]
 
-export const staticTitles = news.map(n=>({ title: n.file }))
+export const staticTitles = news.map(n=>({ title: decodeURIComponent(n.file) }))
