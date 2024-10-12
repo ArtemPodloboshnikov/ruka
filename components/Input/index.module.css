@@ -3,7 +3,7 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    width: 100%;
+    width: fit-content;
 }
 
 .wrap_inner {
@@ -17,7 +17,7 @@
 
 }
 
-input {
+.input {
     outline: none;
     padding-left: 38px;
     border: 2px solid transparent;
@@ -27,12 +27,11 @@ input {
     transition: all .25s ease;
     padding: 7px 13px 7px 10px;
     min-width: 100px;
-    width: 100%;
 }
 
-input:focus {
+.input:focus {
     padding-left: 40px;
-    border-bottom: 2px solid rgba(var(--blue), 1);
+    border-bottom: 2px solid var(--red);
     background: rgba(15, 16, 19, 1);
 }
 
@@ -57,7 +56,7 @@ input:focus {
     color: gray;
 }
 
-input:focus~.placeholder, .hide {
+.input:focus~.placeholder, .hide {
     left: 44px;
     opacity: 0;
 }
@@ -75,13 +74,22 @@ input:focus~.placeholder, .hide {
     border-radius: inherit;
     background: rgba(20, 20, 23, 1);
     pointer-events: none;
-    fill: rgba(var(--blue), 1);
     left: 0;
 }
 
-input:focus~.icon {
+.input:focus~.icon {
     box-shadow: 15px 10px 10px -10px rgba(0, 0, 0, .3);
     transform: translate(-6px,-6px);
     background: rgba(24, 25, 28, 1);
-    fill: rgba(var(--blue), .6)
+}
+
+.input:focus~.icon circle, input:focus~.icon path {
+    stroke: var(--red);
+}
+
+.input[type="search"]::-webkit-search-decoration,
+.input[type="search"]::-webkit-search-cancel-button,
+.input[type="search"]::-webkit-search-results-button,
+.input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }

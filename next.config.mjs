@@ -12,11 +12,13 @@ const nextConfig = {
     //         }
     //     ]
     // },
+    reactStrictMode: false,
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     output: "export",
     basePath: "/ruka",
     images: {
         unoptimized: true,
+        formats: ['image/avif'],
     },
 };
 

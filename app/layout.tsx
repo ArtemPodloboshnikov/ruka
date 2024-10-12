@@ -10,6 +10,8 @@ import Telegram from "@/public/icons/telegram.svg"
 import Image from "next/image"
 import Link from "next/link";
 import PagesLinks from "@/components/PagesLinks";
+import 'leaflet/dist/leaflet.css';
+import Head from "next/head";
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
@@ -34,11 +36,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <Head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+      </Head>
       <body className={montserrat.className}>
         <aside
         className={styles.sidebar}
-        id="sidebar"
         >
+          <div className={styles.cover} id="sidebar" />
           <Image src={Logo} alt="logo" />
           <PagesLinks />
           <div className={styles.networks}>

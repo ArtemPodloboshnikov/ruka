@@ -11,7 +11,7 @@ type CardProps = {
 
 const Card = ({ src, title, tags, href }:CardProps) => {
     return (
-        <Link className={styles.wrap} href={`/news/${href}`}>
+        <Link className={styles.wrap} href={href}>
             <div style={{ height: "423px", width: "100%", position: "relative" }}>
                 <Image src={src} alt={title} fill className={styles.img} />
             </div>
@@ -27,6 +27,7 @@ const Card = ({ src, title, tags, href }:CardProps) => {
                     className={styles.tag}
                     >
                         {tag}
+                        {idx !== tags.length - 1 ? "," : ""}
                     </div>
                     )}
                 </div>

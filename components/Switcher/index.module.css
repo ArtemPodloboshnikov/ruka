@@ -1,0 +1,132 @@
+.wrap {
+    padding: 5px;
+    border-radius: 20px;
+    min-width: 48px;
+    width: fit-content;
+    min-height: 28px;
+    max-height: 28px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 16, 19, 1);
+    transition: all .25s ease;
+    overflow: hidden;
+}
+
+.wrap:hover {
+    background: rgba(10, 11, 14, 1);
+}
+
+.wrap:active {
+    transform: scale(.9);
+}
+
+.input {
+    position: absolute;
+    width: 100%;
+    opacity: 0!important;
+    height: 100%;
+    border-radius: inherit;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background: rgba(30, 32, 35, 1);
+    border-radius: 20px;
+    transition: all .25s ease;
+    position: absolute;
+    z-index: 10;
+    left: 4px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input:checked~.circle {
+    left: calc(100% - 24px);
+    box-shadow: -5px 0 25px 0 rgba(30, 32, 35, .6);
+    color: white;
+}
+
+.text.on {
+    transform: translate(-100%);
+    position: absolute;
+    opacity: 0;
+}
+
+.input:checked~.text.on {
+    transform: translate(0);
+    position: relative;
+    opacity: 1;
+}
+
+.input:checked~.text {
+    padding-left: 5px;
+    padding-right: 25px;
+    color: #fff;
+}
+
+.text {
+    font-size: .7rem;
+    padding: 5px 5px 5px 25px;
+    transition: all .25s ease .05s;
+    color: white;
+    fill: white;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.input:checked~.text.off {
+    transform: translate(100%);
+    position: absolute;
+    opacity: 0;
+}
+
+.input:checked~.background {
+    opacity: 1;
+    transform: scale(1);
+    width: 100%;
+    padding-bottom: 100%;
+    left: 0;
+    border-radius: 50%;
+    transition: all .25s ease;
+}
+
+.background {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background: var(--red);
+    border-radius: inherit;
+    z-index: 2;
+    transition: all .25s ease-out;
+    transform: scale(1);
+    left: -100%;
+    border-radius: 50%;
+    padding-bottom: 100%;
+}
+
+@keyframes rotateSwitch {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}

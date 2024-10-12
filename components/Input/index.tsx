@@ -7,7 +7,7 @@ enum InputIcon {
 }
 
 type InputProps = {
-    type: "text"|"password"|"email"|"search"|"tel",
+    type?: "text"|"password"|"email"|"search"|"tel",
     placeholder: string,
     icon?: InputIcon,
     disabled?: boolean,
@@ -32,7 +32,7 @@ const Input = ({ type="text", placeholder, disabled, value, setValue, icon, min=
     return (
         <div className={styles.wrap_outter}>
             <div className={styles.wrap_inner}>
-                <input min={min} max={max} step="1" type={type} className={value !== "" ? styles.active : ""} id={id} value={value} onChange={(e)=>setValue(e.target.value)} disabled={disabled} />
+                <input min={min} max={max} step="1" type={type} className={[value !== "" ? styles.active : "", styles.input].join(" ")} id={id} value={value} onChange={(e)=>setValue(e.target.value)} disabled={disabled} />
                 <label htmlFor={id} className={`${styles.placeholder} ` + (value !== "" ? styles.hide : "")}>{placeholder}</label>
                 {(icon || iconType[type]) &&
                     <span className={styles.icon}>

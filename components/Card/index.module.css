@@ -29,14 +29,15 @@
 .tags {
     display: flex;
     gap: 10px;
+    flex-flow: wrap;
 }
 
 .tag {
     font-weight: 500;
     font-size: 16px;
+    height: fit-content;
     border-radius: 50%;
     width: fit-content;
-    height: 41px;
     color: var(--white);
 }
 

@@ -1,4 +1,4 @@
-import { staticNewsTitles } from "@/constants/system";
+import { staticDojoTitles } from "@/constants/system";
 import Wrap from "./Wrap";
 
 type Params = {
@@ -6,7 +6,7 @@ type Params = {
 }
 
 export async function generateStaticParams(): Promise<Params[]> {
-    return staticNewsTitles
+    return staticDojoTitles
 }
 
 export default function Article({ params }: { params: { title: string } }) {
