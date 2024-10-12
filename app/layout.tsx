@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "РСКА",
   description: "РСКА — Российское Сотружество Касима-Син-рю и Айкидо",
   openGraph: {
-    images: ["/icons/logo.svg"],
+    images: ["https://artempodloboshnikov.github.io/ruka/icons/logo.svg"],
     title: "РСКА",
     description: "РСКА — Российское Сотружество Касима-Син-рю и Айкидо"
   }
