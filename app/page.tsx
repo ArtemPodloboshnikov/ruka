@@ -1,7 +1,6 @@
-"use client"
-import { redirect } from "next/navigation";
+import { redirect, RedirectType } from "next/navigation";
 
 export default function Home() {
-  redirect("/news")
+  redirect("/news", RedirectType.replace)
   return <></>;
 }
