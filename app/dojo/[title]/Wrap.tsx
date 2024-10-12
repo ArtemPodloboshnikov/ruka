@@ -1,7 +1,7 @@
 "use client"
 
 import { dojo, domainIcon } from "@/constants/system"
-import { Globe, MapPin } from "lucide-react"
+import { Globe } from "lucide-react"
 import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
