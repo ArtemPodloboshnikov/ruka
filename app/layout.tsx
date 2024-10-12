@@ -20,6 +20,11 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "РСКА",
   description: "РСКА — Российское Сотружество Касима-Син-рю и Айкидо",
+  openGraph: {
+    images: ["/ruka/logo.svg"],
+    title: "РСКА",
+    description: "РСКА — Российское Сотружество Касима-Син-рю и Айкидо"
+  }
 };
 
 export default function RootLayout({
