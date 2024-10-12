@@ -3,15 +3,15 @@ import remarkGfm from 'remark-gfm';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    async redirects() {
-        return [
-            {
-                "source": "/",
-                "destination": "/news",
-                "permanent": true
-            }
-        ]
-    },
+    // async redirects() {
+    //     return [
+    //         {
+    //             "source": "/",
+    //             "destination": "/news",
+    //             "permanent": true
+    //         }
+    //     ]
+    // },
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     output: "export",
     basePath: "/ruka",
