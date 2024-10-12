@@ -1,9 +1,8 @@
-import styles from "./page.module.css";
+"use client"
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-
-    </div>
-  );
+  const router = useRouter()
+  router.push("/ruka/news")
+  return <></>;
 }
