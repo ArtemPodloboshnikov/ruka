@@ -26,7 +26,6 @@ const Switcher = ({ text="", value, options=[], setOptions, callback, Icon }:Swi
                 setIsChecked(true)
             }
         }
-        console.log(options)
 
         if (callback) callback()
     }
